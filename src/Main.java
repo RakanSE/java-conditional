@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
@@ -21,8 +22,11 @@ public class Main {
             System.out.println("Welcome Superuser role");
 
         }
-        else {
+        else if (entr == 3) {
             System.out.println("Welcome user role");
+        }
+        else {
+            System.out.println("Invalid choice please choose from the list");
         }
 
         System.out.println("----------------------------------------------");
@@ -57,8 +61,9 @@ public class Main {
 
 // Q3
 
-        System.out.print("Enter the number from 1 - 7 of a day: ");
-        int day = in.nextInt();
+        Random rand = new Random();
+        int day = rand.nextInt(7) + 1;
+        System.out.println("The random number is: " + day);
 
         switch (day){
             case 1:
